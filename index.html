@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    h1 {
+      color: hotpink;
+    }
+    #button-yes {
+      position: relative;
+      background-color: pink;
+      left: 200px;
+      top: 200px;
+      border: 1px solid transparent;
+    }
+    #button-no {
+      position: absolute;
+      left: 150px;
+      top: 200px;
+      background-color: pink;
+      border: 1px solid transparent;
+    }
+  </style>
+</head>
+<body>
+<h1 id="heading">Do You Love Me?</h1>
+<button id="button-yes" onclick="love()">Yes</button>
+<button id="button-no" onmouseover="noLove()">No</button>
+<script>
+  let buttonYes = document.getElementById("button-yes");
+  let buttonNo = document.getElementById("button-no");
+  let heading = document.getElementById("heading");
+  function love(){
+    heading.innerHTML="I Love You 3000 !";
+  }
+  function noLove() {
+    let height = Math.round(Math.random() * window.innerHeight);
+    let width = Math.round(Math.random() * window.innerWidth);
+    buttonNo.style.left = width + "px";
+    buttonNo.style.top = height + "px";
+  }
+</script>
+</body>
+</html>
